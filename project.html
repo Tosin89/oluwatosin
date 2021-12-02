@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Job Website </title>
+        <meta name="viewpont" content="width=device-width, initial-scale=1.0">
+        <link  rel="stylesheet" href="project.css" >
+       <link rel="stylesheet"
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+         <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+
+
+
+ </head>
+<body>
+  <body>
+    <section id="header">
+        <div class="menu-bar">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#"><img src="jobimage.jpg" class="image"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">ALL JOBS<b>
+                        </a></b></li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACTS</a>
+                      </li>
+                  </ul>       
+                  </div>
+                  </nav>
+                  </div>
+                  <div class="banner text-center"> 
+                    <h1>ALL JOBS</h1>
+                    <style>
+                      .filterDiv {
+                        float: left;
+                        background-color: #2196F3;
+                        color: #ffffff;
+                        width: 100px;
+                        line-height: 100px;
+                        text-align: center;
+                        margin: 2px;
+                        display: none;
+                      }
+                      
+                      .show {
+                        display: block;
+                      }
+                      
+                      .container {
+                        margin-top: 20px;
+                        overflow: hidden;
+                      }
+                      
+                      /* Style the buttons */
+                      .btn {
+                        border: none;
+                        outline: none;
+                        padding: 12px 16px;
+                        background-color: #f1f1f1;
+                        cursor: pointer;
+                      }
+                      
+                      .btn:hover {
+                        background-color: #ddd;
+                      }
+                      
+                      .btn.active {
+                        background-color: #666;
+                        color: white;
+                      }
+                      .company-details{
+                        box-shadow: 0 2px 70px 0 rgba(110,130,208, .18);
+                        border-radius: 5px;
+                         margin-bottom: 20px;
+                      }
+                    .job-update{
+                       background: white;
+                       padding: 10px 20px;
+                       border-radius: 5px;
+                      }
+                      </style>
+                      <body>
+                      
+                      <h2>Jobs Categories</h2>
+                      
+                      <div id="myBtnContainer">
+                        <button class="btn active" onclick="filterSelection('all')"> All Jobs Available</button>
+                        <button class="btn" onclick="filterSelection('hr')"> Human Resources</button>
+                        <button class="btn" onclick="filterSelection('accounting')"> Accountant</button>
+                        <button class="btn" onclick="filterSelection('engineer')"> Engineering</button>
+                      
+                         <button class="btn" onclick="filterSelection('project')"> Project Manager</button>
+                        <button class="btn" onclick="filterSelection('medical')"> Medicals</button>
+    
+                      <button class="btn" onclick="filterSelection('location')"> Locations</button>
+                      </div>
+
+                      
+                        <div class="jobs">
+                      <div class="filterDiv engineer">Civil Engineer
+                      <p><small>Lagos</small></p></div>
+                      <div class="filterDiv engineer">E.Engineer
+                        <p><small>Lagos</small></p></div>
+                      <div class="filterDiv engineer">C. Engineer
+                        <p><small>Benin</small></p></div>
+                     <div class="filterDiv engineer">Mech. Engineer
+                      <p><small>Abuja</small></p></div>
+                      <div class="filterDiv medical">Nurse
+                        <p><small>Lagos</small></p></div>
+                      <div class="filterDiv project">Project Manager
+                        <p><small>Ibadan</small></p></div>
+                      <div class="filterDiv project">Data Analyst
+                        <p><small>Abeokuta</small></p></div>
+                      <div class="filterDiv hr">H R
+                        <p><small>Abuja</small></p></div>
+                        <div class="filterDiv hr">H R
+                          <p><small>Lagos</small></p></div>
+                          <div class="filterDiv hr">H R
+                            <p><small>Ibadan</small></p></div>
+                      <div class="filterDiv accounting">Accoutant
+                        <p><small>P.Harcourt</small></p></div>
+                      <div class="filterDiv accounting">Manager
+                      
+                    
+                      
+                      </div>
+                      <script>
+                      filterSelection("all")
+                      function filterSelection(c) {
+                        var x, i;
+                        x = document.getElementsByClassName("filterDiv");
+                        if (c == "all") c = "";
+                        for (i = 0; i < x.length; i++) {
+                          w3RemoveClass(x[i], "show");
+                          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                        }
+                      }
+                      
+                      function w3AddClass(element, name) {
+                        var i, arr1, arr2;
+                        arr1 = element.className.split(" ");
+                        arr2 = name.split(" ");
+                        for (i = 0; i < arr2.length; i++) {
+                          if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                        }
+                      }
+                      
+                      function w3RemoveClass(element, name) {
+                        var i, arr1, arr2;
+                        arr1 = element.className.split(" ");
+                        arr2 = name.split(" ");
+                        for (i = 0; i < arr2.length; i++) {
+                          while (arr1.indexOf(arr2[i]) > -1) {
+                            arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                          }
+                        }
+                        element.className = arr1.join(" ");
+                      }
+                      
+                      // Add active class to the current button (highlight it)
+                      var btnContainer = document.getElementById("myBtnContainer");
+                      var btns = btnContainer.getElementsByClassName("btn");
+                      for (var i = 0; i < btns.length; i++) {
+                        btns[i].addEventListener("click", function(){
+                          var current = document.getElementsByClassName("active");
+                          current[0].className = current[0].className.replace(" active", "");
+                          this.className += " active";
+                        });
+                      }
+                      </script>   
+                  </div>
+                
+                  </section>
+            
+            <section id="Jobs">
+         <div class="container">
+      <div class="company-details">
+        <div class="job-update">
+          <div class="serch-fill">
+            <form role="search" method="get" class="search-form" action="https://joblistnigeria.com/">
+            <select name="search_cat" class="categories">
+            <option value="">Job Categories</option>
+            <option value="accounting-jobs-in-nigeria">Accounting Jobs in Nigeria</option>
+            <option value="administrative-jobs-in-nigeria">Administrative Jobs in Nigeria</option>
+            <option value="advertising-jobs-in-nigeria">Advertising Jobs in Nigeria</option>
+            <option value="agency-jobs-in-nigeria">Agency Jobs in Nigeria</option>
+            <option value="agriculture-jobs-in-nigeria">Agriculture Jobs in Nigeria</option>
+            <option value="application-development-jobs-in-nigeria">Application development Jobs in Nigeria</option>
+            <option value="architectural-jobs-in-nigeria">Architectural Jobs in Nigeria</option>
+            <option value="automotive-jobs-in-nigeria">Automotive Jobs in Nigeria</option>
+            <option value="aviation-jobs-in-nigeria">Aviation Jobs in Nigeria</option>
+            <option value="bakery-jobs-in-nigeria">Bakery Jobs in Nigeria</option>
+            <option value="banking-jobs-in-nigeria">Banking Jobs in Nigeria</option>
+            <option value="brand-management-jobs-in-nigeria">Brand management jobs in Nigeria</option>
+            <option value="brewery-jobs-in-nigeria">Brewery Jobs in Nigeria</option>
+            <option value="buiness-developer">Buiness developer</option>
+            <option value="buiness-management-jobs-in-nigeria">Buiness management Jobs in Nigeria</option>
+            <option value="business-developer-jobs-in-nigeria">Business developer Jobs in Nigeria</option>
+            <option value="business-mgt-jobs-in-nigeria">Business Mgt Jobs in Nigeria</option>
+            <option value="business-product-analyst">Business Product Analyst</option>
+            <option value="call-centre-jobs-in-nigeria">Call Centre Jobs in Nigeria</option>
+            <option value="cashier-jobs-in-nigeria">Cashier Jobs in Nigeria</option>
+            <option value="catering-jobs-in-nigeria">Catering Jobs in Nigeria</option>
+            <option value="communication-jobs-in-nigeria">Communication Jobs in Nigeria</option>
+            <option value="companies-in-nigeria">Companies in Nigeria</option>
+            <option value="computer-jobs-in-nigeria">Computer Jobs in Nigeria</option>
+            <option value="construction-jobs-in-nigeria">Construction Jobs in Nigeria</option>
+            <option value="consultancy-jobs-in-nigeria">Consultancy Jobs in Nigeria</option>
+            <option value="contractor-jobs-in-nigeria">Contractor Jobs in Nigeria</option>
+            <option value="culture-affairs-assistant-jobs-in-nigeria">Culture affairs assistant Jobs in Nigeria</option>
+            <option value="customer-service-jobs-in-nigeria">Customer Service Jobs in Nigeria</option>
+            <option value="data-analysis-jobs-in-nigeria">Data analysis Jobs in Nigeria</option>
+            <option value="design-jobs-in-nigeria">Design Jobs in Nigeria</option>
+            <option value="diesel-technician-jobs-in-nigeria">Diesel technician Jobs in Nigeria</option>
+            <option value="dispatch-and-delivery">Dispatch and Delivery</option>
+            <option value="driving-jobs-in-nigeria">Driving Jobs in Nigeria</option>
+            <option value="education-jobs-in-nigeria">Education Jobs in Nigeria</option>
+            <option value="news-on-nigerian-education-sector">Education News</option>
+            <option value="electrical-technician">Electrical technician</option>
+            <option value="employment-placement-agencies">Employment Placement Agencies</option>
+            <option value="energy-jobs-in-nigeria">Energy Jobs in Nigeria</option>
+            <option value="engineering-jobs-in-nigeria">Engineering Jobs in Nigeria</option>
+            <option value="entrepreneursip-award">Entrepreneursip Award</option>
+            <option value="environmental-jobs-in-nigeria">Environmental Jobs in Nigeria</option>
+            <option value="executive-assistant">Executive Assistant</option>
+            <option value="executive-mgt-jobs-in-nigeria">Executive Mgt Jobs in Nigeria</option>
+            <option value="experienced-jobs-in-nigeria">Experienced Jobs in Nigeria</option>
+            <option value="fashion-jobs">fashion jobs</option>
+            <option value="featured">Featured</option>
+            <option value="fellowships">Fellowships</option>
+            <option value="finance-jobs-in-nigeria">Finance Jobs in Nigeria</option>
+            <option value="fmcg-jobs-in-nigeria">FMCG Jobs in Nigeria</option>
+            <option value="foam-cutting-machine-operator-in-nigeria">Foam Cutting Machine Operator in Nigeria</option>
+            <option value="foam-cutting-production-manager-jobs-in-nigeria">Foam cutting production manager jobs in Nigeria</option>
+            <option value="food-and-drink-jobs-in-nigeria">Food and Drink Jobs in Nigeria</option>
+            <option value="front-desk-officer">Front desk officer</option>
+            <option value="general-jobs-in-nigeria">General Jobs in Nigeria</option>
+            <option value="government-jobs-in-nigeria">Government Jobs in Nigeria</option>
+            <option value="graduate-jobs-in-nigeria">Graduate Jobs in Nigeria</option>
+            <option value="head-of-stabilization-jobs-in-nigeria">Head of stabilization Jobs In Nigeria</option>
+            <option value="healthcare-jobs-in-nigeria">Healthcare Jobs in Nigeria</option>
+            <option value="hnd-jobs-in-nigeria">HND Jobs in Nigeria</option>
+            <option value="hospitality-jobs-in-nigeria">Hospitality Jobs in Nigeria</option>
+            <option value="hotel-jobs-in-nigeria">Hotel Jobs in Nigeria</option>
+            <option value="hse-jobs-in-nigeria">HSE Jobs in Nigeria</option>
+            <option value="human-resources-jobs-in-nigeria">Human Resources Jobs Nigeria</option>
+            <option value="immigration-jobs-in-nigeria">Immigration Jobs in Nigeria</option>
+            <option value="industrial-trainee-jobs-in-nigeria">Industrial Trainee Jobs in Nigeria</option>
+            <option value="information-technology-jobs">Information Technology Jobs</option>
+            <option value="insurance-jobs-in-nigeria">Insurance Jobs in Nigeria</option>
+            <option value="international-jobs-in-nigeria">International Jobs in Nigeria</option>
+            <option value="internships-in-nigeria">Internships in Nigeria</option>
+            </select>
+            </form>
+            </div></div></div></div>
+
+    </section>
+
+    <!--------------------------------footer-------------->
+<p id="up"><center><a href="#header"> <b>(GO UP)</b></a></center></p>
+<section id="footer" class="text-center">
+        <img src="joblogo.jpg">
+  <p>Email-tosyne_oshifeq@yahoo.com
+    <br>Contact:08038273995, 08131856266</p>
+    <p> Copyright ©  - 2021 Oluwatosin Osifeko. All rights reserved.
+      <br>Coder: Priscilia and Oluwatosin</p>
+  <a href="#"><img src="jobimage.jpg"></a>
+  <a href="#"><img src="jobseach2.jpg"></a>  
+
+</section>
+  
+</body>
+</html>
